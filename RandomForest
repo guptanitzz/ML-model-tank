@@ -1,7 +1,24 @@
 import pandas as pd
 import numpy as np
-import sklearn
+from sklearn.model_selection import train_test_split,GridSearchCV,RandomizedSearchCV,StratifiedKFold,cross_val_score,KFold
+from sklearn.feature_selection import mutual_info_regression,f_regression,SelectPercentile,RFE,RFECV
+from sklearn.ensemble import GradientBoostingRegressor,RandomForestRegressor
+from sklearn.ensemble.partial_dependence import plot_partial_dependence,partial_dependence
+from sklearn.metrics import mean_squared_error,make_scorer,roc_auc_score
+import matplotlib.pyplot as plt
 
+#import csv file
 data=pd.read_csv('monthly-car-sales-in-quebec-1960.csv')
 
+# check the values
+print(data.describe())
 
+#check the missing info
+print(data.info())
+
+#Print columns
+print(data.columns)
+
+#Check the input
+plt(data.Car_sales)
+plt.show()
